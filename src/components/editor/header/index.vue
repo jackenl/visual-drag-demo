@@ -1,10 +1,12 @@
 <template>
   <div class="editor-header-container">
-    <el-button @click="onBackout">撤销</el-button>
-    <el-button @click="onReform">重做</el-button>
-    <el-button @click="onClear">清空画布</el-button>
-    <el-button @click="onPreview">预览</el-button>
-    <el-button @click="onSave">保存</el-button>
+    <div class="canvas-control">
+      <el-button @click="onBackout">撤销</el-button>
+      <el-button @click="onReform">重做</el-button>
+      <el-button @click="onClear">清空画布</el-button>
+      <el-button @click="onPreview">预览</el-button>
+      <el-button @click="onSave">保存</el-button>
+    </div>
   </div>
 </template>
 
@@ -26,13 +28,20 @@ export default {
     },
     onSave() {
       this.$emit('save')
-    }
+    },
   }
 }
 </script>
 
 <style lang="less" scoped>
 .editor-header-container {
-  padding: 20px;
+  height: 60px;
+  background-color:	#363636;
+}
+.canvas-control {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
 }
 </style>

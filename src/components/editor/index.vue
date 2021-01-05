@@ -32,4 +32,17 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.editor-container {
+  position: relative;
+  height: 100%;
+}
+.editor-main {
+  display: flex;
+  align-items: stretch;
+  height: calc(100% - 60px);
+}
+/deep/ .editor-canvas-container {
+  flex: 1;
+  background-color: #f6f6f6;
+}
 </style>
