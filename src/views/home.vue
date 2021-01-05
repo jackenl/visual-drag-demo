@@ -20,4 +20,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.home-container {
+  height: 100%;
+}
 </style>
