@@ -1,5 +1,5 @@
 <template>
-  <el-tabs class="editor-right-panel-container" v-model="activeTab" @tab-click="handleClick">
+  <el-tabs class="editor-right-panel-container" v-model="activeTab">
     <el-tab-pane label="属性" name="props">
       属性
     </el-tab-pane>
@@ -17,11 +17,7 @@ export default {
       activeTab: 'props'
     }
   },
-  methods: {
-    handleClick(tab, evt) {
-      console.log(tab, evt)
-    }
-  }
+  methods: {}
 }
 </script>
 

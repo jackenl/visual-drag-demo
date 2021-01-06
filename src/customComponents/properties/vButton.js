@@ -1,0 +1,22 @@
+export default {
+  component: 'v-button',
+  label: '按钮',
+  icon: 'el-icon-edit',
+  propValue: '按钮',
+  animations: [],
+  events: {},
+  style: {
+    width: 100,
+    height: 35,
+    backgroundColor: '',
+    borderRadius: 5,
+    borderWidth: '',
+    borderColor: '',
+    fontSize: 14,
+    fontWeight: '',
+    lineHeight: 1,
+    color: '',
+    letterSpacing: 0,
+    textAlign: '',
+  },
+}
