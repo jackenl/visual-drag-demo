@@ -9,7 +9,7 @@ export default {
   },
   mutations: {
     updateClientConfig(state, data) {
-      state.clientConfig = data
+      state.clientConfig = Object.assign({}, data)
     },
   },
   actions: {
