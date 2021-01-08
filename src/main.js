@@ -8,6 +8,12 @@ import './assets/style/reset.css'
 import './assets/style/animate.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// directives
+import './utils/directives'
+
+// customComponents
+import './customComponents'
+
 // plugins
 import Element from 'element-ui'
 Vue.use(Element, { size: 'small' })
