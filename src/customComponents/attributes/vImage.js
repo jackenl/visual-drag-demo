@@ -1,13 +1,15 @@
+const VueLogo = require('@/assets/logo.png')
+
 export default {
-  component: 'v-image',
+  component: 'VImage',
   label: '图片',
   icon: 'el-icon-picture',
-  propValue: '',
+  propValue: VueLogo,
   animations: [],
   events: {},
   style: {
-    width: 300,
-    height: 200,
+    width: 50,
+    height: 50,
     borderRadius: '',
   }
 }

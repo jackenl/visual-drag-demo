@@ -1,8 +1,8 @@
 <template>
   <div class="editor-header-container">
     <div class="canvas-control">
-      <el-button @click="onBackout">撤销</el-button>
-      <el-button @click="onReform">重做</el-button>
+      <el-button @click="onBackout">撤销(ctrl+z)</el-button>
+      <el-button @click="onReform">重做(ctrl+y)</el-button>
       <el-button @click="onClear">清空画布</el-button>
       <el-button @click="onPreview">预览</el-button>
       <el-button @click="onSave">保存</el-button>

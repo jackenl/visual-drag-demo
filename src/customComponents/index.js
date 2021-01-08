@@ -10,7 +10,8 @@ const Components = {
 const Plugins = {
   install(Vue) {
     Object.keys(Components).forEach((key) => {
-      Vue.component(key, Components[key])
+      const name = Components[key].name
+      Vue.component(name, Components[key])
     })
   }
 }

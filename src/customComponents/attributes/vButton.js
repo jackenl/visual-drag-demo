@@ -1,5 +1,5 @@
 export default {
-  component: 'v-button',
+  component: 'VButton',
   label: '按钮',
   icon: 'el-icon-edit',
   propValue: '按钮',
@@ -9,7 +9,7 @@ export default {
     width: 100,
     height: 35,
     backgroundColor: '',
-    borderRadius: 5,
+    borderRadius: 4,
     borderWidth: '',
     borderColor: '',
     fontSize: 14,
