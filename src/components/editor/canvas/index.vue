@@ -37,6 +37,7 @@
 import { mapState, mapActions } from 'vuex';
 import CanvasShape from './shape';
 import componentList from '@/customComponents/props';
+import { deepClone } from '@/utils/utils';
 
 export default {
   name: 'editor-canvas',
@@ -60,7 +61,8 @@ export default {
     ...mapActions('canvas', ['updateShapeConfig', 'addComponent']),
     handleDrop(e) {
       if (this.isEdited) {
-        const component = componentList[e.dataTransfer.getData('index')];
+        const index = e.dataTransfer.getData('index')
+        const component = deepClone(componentList[index]);
         this.addComponent(component);
       }
     },
