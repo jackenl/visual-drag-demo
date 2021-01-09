@@ -1,5 +1,5 @@
 <template>
-  <div class="editor-container">
+  <div class="editor-container" @click="handleClick">
     <editor-header></editor-header>
     <div class="editor-main">
       <editor-left-panel></editor-left-panel>
@@ -16,18 +16,18 @@ import EditorCanvas from './canvas'
 import EditorRightPanel from './right-panel'
 
 export default {
-  name: 'Editor',
+  name: 'editor',
   components: {
     EditorHeader,
     EditorLeftPanel,
     EditorCanvas,
     EditorRightPanel,
   },
-  data() {
-    return {}
-  },
-  created() {},
-  mounted() {},
+  methods: {
+    handleClick() {
+      this.$store.commit('canvas/updateSelectIndex', null)
+    }
+  }
 }
 </script>
 

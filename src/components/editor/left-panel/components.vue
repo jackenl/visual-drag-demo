@@ -1,7 +1,7 @@
 <template>
-  <div class="component-list-container">
-    <div class="component-list-wrap" @dragstart="handleDragStart">
-      <div class="component-item" v-for="(item, index) in attributesList" :key="index" draggable :data-index="index">
+  <div class="components-container">
+    <div class="components-wrap" @dragstart="handleDragStart">
+      <div class="component-item" v-for="(item, index) in propsList" :key="index" draggable :data-index="index">
         <i :class="['icon', item.icon]"></i>
         <span>{{ item.label }}</span>
       </div>
@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import attributesList from '@/customComponents/attributes'
+import propsList from '@/customComponents/props'
 
 export default {
-  name: 'ComponentList',
+  name: 'components',
   data() {
     return {
-      attributesList,
+      propsList,
     }
   },
   methods: {
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.component-list-wrap {
+.components-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -37,9 +37,10 @@ export default {
 .component-item {
   flex-basis: 45%;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  padding: 5px;
+  border: 1px solid #333;
+  padding: 10px;
   margin-bottom: 10px;
+  box-sizing: border-box;
   color: #333;
   text-align: center;
   cursor: grab;

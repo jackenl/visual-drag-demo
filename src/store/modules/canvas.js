@@ -7,6 +7,7 @@ export default {
       height: 667,
     },
     componentList: [], // 组件列表
+    selectIndex: null, // 选中组件索引
   },
   mutations: {
     updateShapeConfig(state, data) {
@@ -14,6 +15,14 @@ export default {
     },
     updateComponentList(state, data) {
       state.componentList = [].concat(data)
+    },
+    updateSelectIndex(state, data) {
+      state.selectIndex = data
+    },
+    updateComponent(state, { index, config }) {
+      const component = state.componentList[index]
+      const { propValue, style } = config
+      component.style = Object.assign(component.style, style)
     }
   },
   actions: {
@@ -24,6 +33,17 @@ export default {
       const componentList = state.componentList
       componentList.push(component)
       commit('updateComponentList', componentList)
+    },
+    updateComponent({ commit, state }, props) {
+      const index = state.selectIndex
+      const { propValue, ...style } = props
+      commit('updateComponent', {
+        index,
+        config: {
+          propValue,
+          style
+        }
+      })
     },
     removeComponent({ commit, state }, index) {
       const componentList = state.componentList
