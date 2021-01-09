@@ -36,10 +36,10 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import CanvasShape from './shape';
-import attributesList from '@/customComponents/attributes';
+import componentList from '@/customComponents/props';
 
 export default {
-  name: 'EditorCanvas',
+  name: 'editor-canvas',
   components: {
     CanvasShape,
   },
@@ -60,9 +60,8 @@ export default {
     ...mapActions('canvas', ['updateShapeConfig', 'addComponent']),
     handleDrop(e) {
       if (this.isEdited) {
-        console.log(e)
-        const componentAttributes = attributesList[e.dataTransfer.getData('index')];
-        this.addComponent(componentAttributes);
+        const component = componentList[e.dataTransfer.getData('index')];
+        this.addComponent(component);
       }
     },
     handleDragOver() {

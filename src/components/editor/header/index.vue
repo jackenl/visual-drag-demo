@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'EditorHeader',
+  name: 'editor-header',
   methods: {
     onBackout() {
       this.$emit('backout')

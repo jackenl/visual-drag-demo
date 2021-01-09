@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'VImage',
+  name: 'v-image',
   props: {
     propValue: {
       type: String,
@@ -17,4 +17,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.v-image-container {
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
 </style>
